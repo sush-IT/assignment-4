@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <section class="form-card">
+            <div class="heading">
+                <h1>Employee Registration</h1>
+                <p>Please complete all fields to register.</p>
+            </div>
+
+            <form id="employeeForm" novalidate>
+                <div class="field">
+                    <label for="employeeName">Full Name</label>
+                    <input type="text" id="employeeName"
+                           placeholder="Enter full name" required>
+                    <small class="error" id="nameError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email"
+                           placeholder="name@example.com" required>
+                    <small class="error" id="emailError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password"
+                           placeholder="At least 8 characters" required>
+                    <small class="hint">Use 8+ characters with uppercase, lowercase, and a number.</small>
+                    <small class="error" id="passwordError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone"
+                           placeholder="10-digit mobile number"
+                           inputmode="numeric" required>
+                    <small class="error" id="phoneError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="department">Department</label>
+                    <select id="department" required>
+                        <option value="">Select a department</option>
+                        <option value="Human Resources">Human Resources</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Sales">Sales</option>
+                        <option value="Operations">Operations</option>
+                    </select>
+                    <small class="error" id="departmentError"></small>
+                </div>
+
+                <div class="buttons">
+                    <button type="submit">Register Employee</button>
+                    <button type="reset" class="reset-button">Reset</button>
+                </div>
+
+                <p id="formMessage" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

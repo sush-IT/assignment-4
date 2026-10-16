@@ -1,0 +1,151 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eaf2ff, #f6f8fc);
+    color: #1f2937;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 560px;
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 28px rgba(23, 54, 93, 0.12);
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.heading h1 {
+    color: #17365d;
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+.heading p {
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.field {
+    margin-bottom: 17px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    background: white;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #bfdbfe;
+    border-color: #2563eb;
+}
+
+input.invalid,
+select.invalid {
+    border-color: #dc2626;
+}
+
+.hint {
+    display: block;
+    margin-top: 6px;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.error {
+    display: block;
+    margin-top: 5px;
+    color: #b91c1c;
+    font-size: 13px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+button {
+    flex: 1;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #17365d;
+    color: white;
+}
+
+button:hover {
+    background: #24558c;
+}
+
+button.reset-button {
+    background: #64748b;
+}
+
+button.reset-button:hover {
+    background: #475569;
+}
+
+#formMessage {
+    margin-top: 16px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+#formMessage.success {
+    color: #15803d;
+}
+
+#formMessage.failure {
+    color: #b91c1c;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .form-card {
+        padding: 22px 18px;
+    }
+
+    .heading h1 {
+        font-size: 23px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}
